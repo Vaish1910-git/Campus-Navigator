@@ -1,0 +1,35 @@
+/* src/components/IntroScreen.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
+.intro-screen {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 9rem;
+  color: #000;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow:
+    2px 2px 0 #fff,
+    4px 4px 0 #ccc,
+    6px 6px 6px rgba(255, 255, 255, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  pointer-events: none;
+  transition: opacity 2.5s ease-out, visibility 0s linear 2.5s;
+  visibility: visible;
+  opacity: 1;
+}
+
+.intro-screen.hidden {
+  opacity: 0;
+  visibility: hidden;
+}

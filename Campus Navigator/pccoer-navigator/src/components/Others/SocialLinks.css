@@ -1,0 +1,91 @@
+.social-links {
+  position: fixed;
+  bottom: 155px;
+  right: 30px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  z-index: 9999;
+  align-items: flex-end;
+}
+
+.social-button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 40px;
+  height: 40px;
+  background-color: rgb(186, 215, 186);
+  border-radius: 10px; /* Rounded square in idle state */
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+   transition: width 0.3s ease, border-radius 0.3s ease;
+  text-decoration: none;
+  position: relative;
+  padding-left: 2px;
+  flex-shrink: 0;
+}
+
+.social-button.hovered {
+  width: 180px;              /* Expand to left */
+  border-radius: 20px;       /* More rounded rectangle */
+}
+
+.social-button img {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;       /* Square icon in idle */
+  object-fit: cover;
+  transition: border-radius 0.3s ease;
+}
+
+/* On hover, image becomes a circle */
+.social-button.hovered img {
+  border-radius: 50%;
+}
+
+.social-button .social-label {
+  color: #333;
+  font-weight: 500;
+  font-size: 14px;
+  margin-left: 10px;
+  white-space: nowrap;
+  opacity: 0;
+  animation: fadeIn 0.2s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* 🔄 Anti-clockwise rotate on hover */
+.social-button.hovered img {
+  border-radius: 50%;
+  animation: rotateBack 0.6s linear forwards;
+}
+
+/* ✅ Clockwise rotate back when unhovered */
+.social-button:not(.hovered) img {
+  animation: rotateForward 0.6s linear forwards;
+}
+
+/* 🌀 Keyframes */
+@keyframes rotateBack {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes rotateForward {
+  from {
+    transform: rotate(-360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}

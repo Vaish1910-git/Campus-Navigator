@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
+/* Base Font */
+body {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Main Container */
+.find-faculty-container {
+  position: relative;
+  height: 100vh;
+  background-size: cover;
+  filter: brightness(1);
+  display: flex;
+  padding: 90px;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  transition: filter 0.3s ease;
+}
+
+/* Add a background-layer to dim only the image */
+.background-layer {
+  position: absolute;
+  inset: 0;
+  background: url("../images/background1.jpeg") no-repeat center center/cover;
+  z-index: 0;
+  transition: filter 0.3s ease;
+  filter: brightness(1); /* original brightness */
+}
+
+/* Dim and blur only when hovering form */
+.blur-active .background-layer {
+  filter: brightness(0.6) blur(2px);
+}
+
+/* Title */
+.faculty-title {
+  position: relative;
+  z-index: 10;
+  font-size: 3rem;
+  color: #fcf6f6;
+  text-align: center;
+  padding-bottom: 75px;
+  font-weight: bold;
+  text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.9);
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.9));
+}
+
+/* Form Container */
+.find-faculty-form {
+  position: relative;
+  z-index: 10;
+  background: rgba(0, 50, 50, 0.85);
+  padding: 25px 30px;
+  border-radius: 15px;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 400px;
+  height: 300px;
+  margin-top: 30px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Form Elements */
+.find-faculty-form input,
+.find-faculty-form select,
+.find-faculty-form button {
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 5px;
+  border: none;
+  font-size: 17px;
+  color: #333;
+}
+
+/* Button */
+.find-faculty-form button {
+  background: darkgreen;
+  color: white;
+  font-weight: 600;
+  font-size: 1.4rem;
+  cursor: pointer;
+  height: 50px;
+  border-radius: 8px;
+}
+
+.find-faculty-form button:hover {
+  background: #004d00;
+}
+
+/* Hover Effect */
+.find-faculty-form:hover {
+  backdrop-filter: blur(5px);
+  background: rgba(0, 50, 50, 0.95);
+  transform: scale(1.015);
+}
+
+/* Faculty Modal Image */
+.faculty-photo-wrapper {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.faculty-photo {
+  max-width: 180px;
+  max-height: 180px;
+  border-radius: 12px;
+  border: 3px solid #022040;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  object-fit: cover;
+}
+
+/* Modal Body */
+.modal-body {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Faculty Text */
+.faculty-details-text {
+  font-size: 17px;
+  color: #022040;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.faculty-text {
+  font-size: 16px;
+  color: #a00;
+  margin: 0;
+}
+
+
+
+/* PDF Link */
+.faculty-pdf-link {
+  display: inline-block;
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #0056b3;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.faculty-pdf-link:hover {
+  color: #003b8e;
+  text-decoration: none;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 500px) {
+  .faculty-photo {
+    max-width: 120px;
+    max-height: 120px;
+  }
+
+  .modal-body {
+    font-size: 14px;
+  }
+
+  .find-faculty-form {
+    width: 90%;
+  }
+
+  .faculty-title {
+    font-size: 2.3rem;
+  }
+
+  .intro-title {
+    font-size: 3.5rem;
+  }
+}
+
+
+

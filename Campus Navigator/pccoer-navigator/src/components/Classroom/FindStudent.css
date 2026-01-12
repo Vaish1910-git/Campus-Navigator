@@ -1,0 +1,222 @@
+/* Base font */
+body {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Background image layer */
+.background-image {
+  background-image: url("../images/background1.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  filter: brightness(1) blur(0px);
+  transition: filter 0.3s ease;
+}
+
+/* Apply deeper brightness and blur when form is hovered */
+.blur-background .background-image {
+  filter: brightness(0.99) blur(4px);
+}
+
+/* Keep form and title above blur */
+.focus-zone {
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.student-title {
+  font-size: 3rem;
+  color: white;
+  font-weight: bold;
+  margin-top: -100px;
+  text-align: center;
+  padding-bottom: 125px;
+  text-shadow:
+    2px 2px 0 #000,
+    4px 4px 0 #000,
+    6px 6px 10px rgba(0, 0, 0, 0.8),
+    0 0 15px rgba(0, 0, 0, 0.9),
+    0 0 25px rgba(0, 0, 0, 0.75);
+  z-index: 10;
+}
+
+/* Form Container */
+.find-student-form {
+  background: rgba(0, 50, 50, 0.8);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 400px;
+  height: 400px;
+}
+
+/* Form Elements */
+.find-student-form input,
+.find-student-form select,
+.find-student-form button {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 17px;
+  color: rgb(91, 91, 91);
+}
+
+/* Submit Button */
+.find-student-form button {
+  background: darkgreen;
+  color: white;
+  font-weight: 500;
+  font-size: 1.4rem;
+  cursor: pointer;
+  height: 50px;
+}
+
+.find-student-form button:hover {
+  background: #004d00;
+}
+
+/* Optional Dim Overlay if needed (not essential) */
+.hover-dim-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 5;
+  pointer-events: none;
+}
+
+/* Main container */
+.find-student-container {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  z-index: 10;
+}
+
+/* Background image layer */
+.background-image {
+  background-image: url("../images/background1.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  filter: brightness(1) blur(0px);
+  transition: filter 0.3s ease;
+}
+
+/* Apply deeper brightness and blur when form is hovered */
+.blur-background .background-image {
+  filter: brightness(1) blur(4px);
+}
+
+/* Keep form and title above blur */
+.focus-zone {
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.student-title {
+  font-size: 3rem;
+  color: white;
+  font-weight: bold;
+  margin-top: -100px;
+  text-align: center;
+  padding-bottom: 125px;
+  text-shadow:
+    2px 2px 0 #000,
+    4px 4px 0 #000,
+    6px 6px 10px rgba(0, 0, 0, 0.8),
+    0 0 15px rgba(0, 0, 0, 0.9),
+    0 0 25px rgba(0, 0, 0, 0.75);
+  z-index: 10;
+}
+
+/* Form Container */
+.find-student-form {
+  background: rgba(0, 50, 50, 0.8);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 400px;
+  height: 400px;
+}
+
+/* Form Elements */
+.find-student-form input,
+.find-student-form select,
+.find-student-form button {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 17px;
+  color: rgb(91, 91, 91);
+}
+
+/* Submit Button */
+.find-student-form button {
+  background: darkgreen;
+  color: white;
+  font-weight: 500;
+  font-size: 1.4rem;
+  cursor: pointer;
+  height: 50px;
+}
+
+.find-student-form button:hover {
+  background: #004d00;
+}
+
+/* Optional Dim Overlay if needed (not essential) */
+.hover-dim-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 5;
+  pointer-events: none;
+}
+
+/* Shrink the black dim and make it instant */
+.custom-backdrop {
+  background-color: rgba(0, 0, 0, 0.2) !important; /* or 0.1 or even transparent */
+  transition: none !important;
+  animation: none !important;
+}
+
+body.modal-open {
+  overflow: hidden !important;
+  position: relative;
+}

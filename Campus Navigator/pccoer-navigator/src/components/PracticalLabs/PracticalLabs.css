@@ -1,0 +1,111 @@
+/* Base Font */
+body {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.find-lab-button {
+  font-size: 20px;        /* ⬅️ Adjust as needed */
+  background-color: darkgreen; /* ⬅️ Teal or any other color */
+  border-color: #004d40;
+  color: white;           /* Text color */
+  padding: 10px 20px;     /* Adjust size */
+  font-weight: 600;       /* Optional for bold look */
+  border-radius: 8px;     /* Rounded corners */
+}
+
+.find-lab-button:hover {
+  background-color: #004d00; /* Darker on hover */
+  border-color: #00332b;
+}
+
+.practical-labs-container {
+  position: relative;
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  padding: 90px;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.background-layer {
+  position: absolute;
+  inset: 0;
+  background: url("../images/background1.jpeg") no-repeat center center/cover;
+  z-index: 0;
+  filter: brightness(1);
+}
+
+.labs-title {
+  position: relative;
+  z-index: 10;
+  font-size: 3rem;
+  color: #fcf6f6;
+  text-align: center;
+  padding-bottom: 75px;
+  font-weight: bold;
+  text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.9);
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.9));
+}
+
+.labs-form {
+  position: relative;
+  z-index: 10;
+  background: rgba(0, 50, 50, 0.85);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden; /* or 'auto' if needed */
+   /* ✅ Optional if you want a minimum size */
+  min-height: 250px;
+}
+
+.labs-form select {
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 5px;
+  border: none;
+  font-size: 17px;
+  color: #333;
+}
+
+.labs-form:hover {
+  backdrop-filter: blur(6px);
+  transform: scale(1.04);
+  box-shadow: 0 0 18px rgba(0, 255, 255, 0.4);
+  transition: all 0.3s ease-in-out;
+
+}
+
+.lab-details {
+  font-size: 35px;         /* Adjust font size */
+  color: #333;             /* Dark gray text */
+  line-height: 1.6;        /* More spacing between lines */
+  margin-top: 20px;
+}
+
+.lab-details p {
+  margin: 5px 0; 
+  font-size: 21px;          /* Space between each line */
+}
+
+@media (max-width: 500px) {
+  .labs-form {
+    width: 90%;
+  }
+
+  .labs-title {
+    font-size: 2.3rem;
+    
+  }
+}
+

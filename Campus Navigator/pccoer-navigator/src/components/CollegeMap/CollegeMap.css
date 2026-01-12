@@ -1,0 +1,164 @@
+/* Global Styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* Page Container */
+.college-map-container {
+  background-image: url("../images/background1.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  padding: 10px 20px 30px 20px;
+  position: relative;
+}
+
+/* Fullscreen dim overlay when hovering */
+.hover-dim-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 5;
+  pointer-events: none;
+}
+
+/* Normal Title */
+.map-title {
+  font-size: 3rem;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 50px;
+  text-shadow:
+    2px 2px 0 #000,
+    4px 4px 0 #000,
+    6px 6px 10px rgba(0, 0, 0, 0.8),
+    0 0 15px rgba(0, 0, 0, 0.9),
+    0 0 25px rgba(0, 0, 0, 0.75);
+  z-index: 10;
+  text-align: center;
+}
+
+/* Button Grid */
+.map {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 3.5rem;
+  width: 100%;
+  max-width: 1000px;
+  z-index: 10;
+  position: relative;
+}
+
+/* Each Button */
+.map-button {
+  padding: 16px;
+  font-size: 20px;
+  background: linear-gradient(135deg, #653513, #094a21);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 14px;
+  width: 220px;
+  height: 90px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.25);
+  font-family: inherit;
+  position: relative;
+  z-index: 2;
+}
+
+.emergency-hover {
+  background: red !important; /* Solid red, override gradient */
+  color: white;
+}
+
+.gents-hover {
+  background: rgb(0, 110, 255) !important; /* Light blue */
+  color: #022040;
+}
+
+.ladies-hover {
+  background: rgb(238, 134, 234) !important; /* Pink */
+  color: #022040;
+}
+
+/* On Hover - Grow & Rise */
+.map-button:hover {
+  transform: scale(2.1);
+  z-index: 20;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-shadow: 1px 1px 2px black;
+  image-rendering: crisp-edges;
+  -webkit-image-rendering: crisp-edges;
+  transition: all 0.3s ease-in-out, background 0.5s ease-in-out;
+
+}
+
+/* Hover Image Mappings */
+.principal-hover:hover     { background-image: url("../images/hover/principal.png"); }
+.admin-hover:hover         { background-image: url("../images/hover/admin.png"); }
+.exam-hover:hover          { background-image: url("../images/hover/exam.png"); }
+.emergency-hover:hover { background: url("../images/hover/emergency.png") center center / cover no-repeat !important; }
+.accounts-hover:hover      { background-image: url("../images/hover/accounts.png"); }
+.nss-hover:hover           { background-image: url("../images/hover/nss.png"); }
+.iqac-hover:hover          { background-image: url("../images/hover/iqac.png"); }
+.cap-hover:hover           { background-image: url("../images/hover/cap.png"); }
+.hod-hover:hover           { background-image: url("../images/hover/hod.png"); }
+.library-hover:hover       { background-image: url("../images/hover/library.png"); }
+.seminar-hover:hover       { background-image: url("../images/hover/seminar.png"); }
+.largehall-hover:hover     { background-image: url("../images/hover/largehall.png"); }
+.commonroom-hover:hover    { background-image: url("../images/hover/commonroom.png"); }
+.gym-hover:hover           { background-image: url("../images/hover/gym.png"); }
+.ladies-hover:hover { background: url("../images/hover/female.png") center center / cover no-repeat !important; }
+.gents-hover:hover { background: url("../images/hover/male.png") center center / cover no-repeat !important; }
+.server-hover:hover        { background-image: url("../images/hover/server.png"); }
+.workshop-hover:hover      { background-image: url("../images/hover/workshop.png"); }
+.canteen-hover:hover       { background-image: url("../images/hover/canteen.png"); }
+.stationary-hover:hover    { background-image: url("../images/hover/stationary.png"); }
+
+/* ONLY bottom 4 buttons expand upward */
+.bottom-expand:hover { transform-origin: bottom center; }
+
+.map.blur-other .map-button:not(.active-hover) {
+  filter: blur(4px);
+  opacity: 0.5;
+  transform: scale(0.95);
+}
+
+/* Popup Image Gallery */
+.image-gallery {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.image-gallery img {
+  width: 230px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.image-gallery img:hover {
+  transform: scale(1.05);
+}

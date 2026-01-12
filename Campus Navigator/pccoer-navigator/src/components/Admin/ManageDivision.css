@@ -1,0 +1,66 @@
+.manage-division {
+  padding: 30px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.manage-division form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.manage-division input {
+  flex: 1 1 200px;
+  padding: 8px;
+}
+
+.manage-division form button {
+  padding: 8px 16px;
+  background: #3e4a89;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.manage-division table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.manage-division th,
+.manage-division td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.manage-division td button {
+  margin-right: 10px;
+  padding: 4px 10px;
+}
+
+.table-wrapper {
+  max-height: 600px; /* adjust height as needed */
+  overflow-y: auto;
+  border: 1px solid #ccc;
+}
+
+.edit-button {
+  background-color: #28a745; /* green */
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.delete-button {
+  background-color: #dc3545; /* red */
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
